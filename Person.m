@@ -17,4 +17,18 @@
     }
     return self;
 }
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    if(self){
+        [self setPersonId:[aDecoder decodeObjectForKey:@"personId"]];
+        [self setName:[aDecoder decodeObjectForKey:@"name"]];
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:_personId forKey:@"personId"];
+    [aCoder encodeObject:_name forKey:@"name"];
+}
 @end

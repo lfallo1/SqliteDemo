@@ -33,10 +33,7 @@ static sqlite3 *database;
 }
 
 -(sqlite3 *)getDatabase{
-    if(database){
-        return database;
-    }
-    return nil;
+    return database;
 }
 
 -(void)copyDbIntoDocumentsDirectory{
