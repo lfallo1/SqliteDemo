@@ -15,7 +15,7 @@
 
 -(Person *)getById;
 
--(NSInteger)insertPerson:(Person *)p;
+-(NSNumber *)insertPerson:(Person *)p;
 
 -(void)deletePerson:(NSInteger)personId;
 

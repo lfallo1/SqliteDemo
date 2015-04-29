@@ -62,8 +62,24 @@ static const int COLUMN_NAME = 1;
     return nil;
 }
 
--(NSInteger)insertPerson:(Person *)p{
-    return 1;
+-(NSNumber *)insertPerson:(Person *)p{
+    [dbHelper openDb];
+    NSString *selectSql = [NSString stringWithFormat: @"insert into person (name) values ('%@')",[p name] ];
+    const char *query = [selectSql UTF8String];
+    sqlite3_stmt *query_stmt = NULL;
+    
+    sqlite3 *database = [dbHelper getDatabase];
+    int res;
+    if((res = sqlite3_prepare_v2(database, query, -1, &query_stmt, NULL))!=SQLITE_OK){
+        NSLog(@"error preparing statement: %@\nError Code: %i", selectSql, res);
+        return [NSNumber numberWithInt:-1];
+    }
+    sqlite3_step(query_stmt);
+    sqlite3_int64 last_inserted_id = sqlite3_last_insert_rowid(database);
+    
+    [dbHelper closeDb];
+    
+    return [NSNumber numberWithLongLong:last_inserted_id];
 }
 
 -(void)deletePerson:(NSInteger)personId

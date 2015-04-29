@@ -13,7 +13,9 @@
 
 @interface ViewController ()
 {
-    NSArray *personList;
+    NSMutableArray *personList;
+    UIBarButtonItem *addItem;
+    PersonDal *dal;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *PersonTableView;
@@ -25,9 +27,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    PersonDal *dal = [[PersonDal alloc]init];
-    personList = [[NSArray alloc] initWithArray:[dal allPerson]];
-    [self.PersonTableView reloadData];
+    //initialize view
+    addItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPerson:)];
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = addItem;
+    
+    //initialize data array
+    dal = [[PersonDal alloc]init];
+    personList = [[NSMutableArray alloc] initWithArray:[dal allPerson]];
+    [self _reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +43,39 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)_reloadData{
+    [self.PersonTableView reloadData];
+}
+
 #pragma mark - Table view data source
+
+-(void)addPerson:sender{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Add Person" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if([[alertView title] isEqualToString:@"Add Person"] && buttonIndex == 1){
+        Person *p = [[Person alloc]initWithPerson:nil name:[[alertView textFieldAtIndex:0]text]];
+        NSNumber *newId = [dal insertPerson:p];
+        [p setPersonId:newId];
+        [personList insertObject:p atIndex:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.PersonTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated{
+    [super setEditing:editing animated:animated];
+    [self.PersonTableView setEditing:editing animated:YES];
+    if(editing){
+        addItem.enabled = NO;
+    }
+    else{
+        addItem.enabled = YES;
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>14D1D36B-C89F-4FE2-86D4-7827A8CB82C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SqliteDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F11873594B6D5E0F9E6DB1CAB8985032210D9DF8</key>
+		<string>http://github.com/lfallo1/sqlitedemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SqliteDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F11873594B6D5E0F9E6DB1CAB8985032210D9DF8</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://github.com/lfallo1/sqlitedemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F11873594B6D5E0F9E6DB1CAB8985032210D9DF8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F11873594B6D5E0F9E6DB1CAB8985032210D9DF8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SqliteDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
