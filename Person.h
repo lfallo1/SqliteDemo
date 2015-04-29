@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface Person : NSObject<NSCoding>
 @property NSNumber *personId;
 @property NSString *name;
 -(id)initWithPerson:(NSNumber *)pid name:(NSString *)n;

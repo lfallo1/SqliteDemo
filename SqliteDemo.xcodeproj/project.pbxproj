@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C140B87B1AEE7CE0003CF1B7 /* phonebook.sql in Resources */ = {isa = PBXBuildFile; fileRef = C140B87A1AEE7CE0003CF1B7 /* phonebook.sql */; };
+		C140B87F1AEEA8F4003CF1B7 /* FileManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C140B87E1AEEA8F4003CF1B7 /* FileManagerHelper.m */; };
+		C140B8831AEEAA4B003CF1B7 /* FavoriteService.m in Sources */ = {isa = PBXBuildFile; fileRef = C140B8821AEEAA4B003CF1B7 /* FavoriteService.m */; };
 		D2AF762F1AED3AAC00FCE46C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF762E1AED3AAC00FCE46C /* main.m */; };
 		D2AF76321AED3AAC00FCE46C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF76311AED3AAC00FCE46C /* AppDelegate.m */; };
 		D2AF76351AED3AAC00FCE46C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF76341AED3AAC00FCE46C /* ViewController.m */; };
@@ -16,7 +19,6 @@
 		D2AF76491AED3AAC00FCE46C /* SqliteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF76481AED3AAC00FCE46C /* SqliteDemoTests.m */; };
 		D2AF76541AED3BF100FCE46C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AF76531AED3BF100FCE46C /* libsqlite3.dylib */; };
 		D2AF76581AED3D1800FCE46C /* DbModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF76571AED3D1800FCE46C /* DbModel.m */; };
-		D2AF765C1AED423100FCE46C /* phonebook.sql in Resources */ = {isa = PBXBuildFile; fileRef = D2AF765B1AED423100FCE46C /* phonebook.sql */; };
 		D2AF76621AED799700FCE46C /* PersonDal.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF76611AED799700FCE46C /* PersonDal.m */; };
 		D2AF76661AED79DD00FCE46C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF76651AED79DD00FCE46C /* Person.m */; };
 		D2AF766B1AED7C0200FCE46C /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AF766A1AED7C0200FCE46C /* ApplicationConstants.m */; };
@@ -36,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C140B87A1AEE7CE0003CF1B7 /* phonebook.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = phonebook.sql; sourceTree = "<group>"; };
+		C140B87D1AEEA8F4003CF1B7 /* FileManagerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileManagerHelper.h; path = SqliteDemo/FileManagerHelper.h; sourceTree = "<group>"; };
+		C140B87E1AEEA8F4003CF1B7 /* FileManagerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileManagerHelper.m; path = SqliteDemo/FileManagerHelper.m; sourceTree = "<group>"; };
+		C140B8811AEEAA4B003CF1B7 /* FavoriteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteService.h; sourceTree = "<group>"; };
+		C140B8821AEEAA4B003CF1B7 /* FavoriteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteService.m; sourceTree = "<group>"; };
 		D2AF76291AED3AAC00FCE46C /* SqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AF762D1AED3AAC00FCE46C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2AF762E1AED3AAC00FCE46C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,7 +59,6 @@
 		D2AF76531AED3BF100FCE46C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D2AF76561AED3D1800FCE46C /* DbModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbModel.h; sourceTree = "<group>"; };
 		D2AF76571AED3D1800FCE46C /* DbModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbModel.m; sourceTree = "<group>"; };
-		D2AF765B1AED423100FCE46C /* phonebook.sql */ = {isa = PBXFileReference; lastKnownFileType = file; name = phonebook.sql; path = ../phonebook.sql; sourceTree = "<group>"; };
 		D2AF765E1AED743100FCE46C /* PersonDalProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDalProtocol.h; sourceTree = "<group>"; };
 		D2AF76601AED799700FCE46C /* PersonDal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDal.h; sourceTree = "<group>"; };
 		D2AF76611AED799700FCE46C /* PersonDal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDal.m; sourceTree = "<group>"; };
@@ -89,9 +95,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C140B87C1AEEA8DC003CF1B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C140B87D1AEEA8F4003CF1B7 /* FileManagerHelper.h */,
+				C140B87E1AEEA8F4003CF1B7 /* FileManagerHelper.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		C140B8801AEEAA39003CF1B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C140B8811AEEAA4B003CF1B7 /* FavoriteService.h */,
+				C140B8821AEEAA4B003CF1B7 /* FavoriteService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		D2AF76201AED3AAC00FCE46C = {
 			isa = PBXGroup;
 			children = (
+				C140B8801AEEAA39003CF1B7 /* Services */,
+				C140B87C1AEEA8DC003CF1B7 /* Utilities */,
 				D2AF76731AEDA6A000FCE46C /* PhoneDetailsTableViewController.h */,
 				D2AF76741AEDA6A000FCE46C /* PhoneDetailsTableViewController.m */,
 				D2AF76681AED7BEA00FCE46C /* AppConstants */,
@@ -133,7 +159,7 @@
 		D2AF762C1AED3AAC00FCE46C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D2AF765B1AED423100FCE46C /* phonebook.sql */,
+				C140B87A1AEE7CE0003CF1B7 /* phonebook.sql */,
 				D2AF762D1AED3AAC00FCE46C /* Info.plist */,
 				D2AF762E1AED3AAC00FCE46C /* main.m */,
 				D2AF76671AED7B2B00FCE46C /* Constants.pch */,
@@ -279,7 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AF765C1AED423100FCE46C /* phonebook.sql in Resources */,
+				C140B87B1AEE7CE0003CF1B7 /* phonebook.sql in Resources */,
 				D2AF76381AED3AAC00FCE46C /* Main.storyboard in Resources */,
 				D2AF763D1AED3AAC00FCE46C /* LaunchScreen.xib in Resources */,
 				D2AF763A1AED3AAC00FCE46C /* Images.xcassets in Resources */,
@@ -301,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AF76661AED79DD00FCE46C /* Person.m in Sources */,
+				C140B8831AEEAA4B003CF1B7 /* FavoriteService.m in Sources */,
 				D2AF76351AED3AAC00FCE46C /* ViewController.m in Sources */,
 				D2AF76321AED3AAC00FCE46C /* AppDelegate.m in Sources */,
 				D2AF766E1AED9F5C00FCE46C /* PhoneNumber.m in Sources */,
@@ -308,6 +335,7 @@
 				D2AF762F1AED3AAC00FCE46C /* main.m in Sources */,
 				D2AF76581AED3D1800FCE46C /* DbModel.m in Sources */,
 				D2AF766B1AED7C0200FCE46C /* ApplicationConstants.m in Sources */,
+				C140B87F1AEEA8F4003CF1B7 /* FileManagerHelper.m in Sources */,
 				D2AF76721AEDA2C600FCE46C /* PhoneDal.m in Sources */,
 				D2AF76751AEDA6A000FCE46C /* PhoneDetailsTableViewController.m in Sources */,
 			);
@@ -436,8 +464,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lancefallon/Documents/xcode/SqliteDemo/SqliteDemo/Constants.pch;
+				GCC_PREFIX_HEADER = /Users/lfallon/Desktop/SqliteDemo/SqliteDemo/Constants.pch;
 				INFOPLIST_FILE = SqliteDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -448,8 +477,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lancefallon/Documents/xcode/SqliteDemo/SqliteDemo/Constants.pch;
+				GCC_PREFIX_HEADER = /Users/lfallon/Desktop/SqliteDemo/SqliteDemo/Constants.pch;
 				INFOPLIST_FILE = SqliteDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -508,6 +538,7 @@
 				D2AF764E1AED3AAC00FCE46C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2AF764F1AED3AAC00FCE46C /* Build configuration list for PBXNativeTarget "SqliteDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +547,7 @@
 				D2AF76511AED3AAC00FCE46C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

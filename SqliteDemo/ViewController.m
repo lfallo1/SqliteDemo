@@ -10,6 +10,7 @@
 #import "PhoneDetailsTableViewController.h"
 #import "PersonDal.h"
 #import "PhoneDal.h"
+#import "FavoriteService.h"
 
 @interface ViewController ()
 {
@@ -51,6 +52,30 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
     cell.textLabel.text = [[personList objectAtIndex:indexPath.row] name];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    [FavoriteService addToFavorites:[personList objectAtIndex:indexPath.row] filename:@"Person.data" callback:^(NSString *msg){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Favorites" message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+}
+
+- (IBAction)showFavoritesClicked:(id)sender{
+    NSMutableArray *favs = [FavoriteService getFavorites:@"Person.data"];
+    NSString *msg = [[NSString alloc]init];
+    if(favs != nil){
+        for(int i = 0; i < [favs count]; i++){
+            NSNumber *personId = [[favs objectAtIndex:i]personId];
+            NSString *name = [[favs objectAtIndex:i]name];
+            msg = [msg stringByAppendingString:[NSString stringWithFormat:@"%@ - %@\n",name, personId]];
+        }
+    }
+    else{
+        msg = @"No contacts are currently in favorites";
+    }
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Favorites" message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 #pragma mark - Navigation
